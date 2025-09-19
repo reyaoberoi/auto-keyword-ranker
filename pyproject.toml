@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "auto-keyword-ranker"
+version = "0.1.8" 
+description = "Lightweight keyword & keyphrase extraction and ranking using TF-IDF with optional embedding re-ranking."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [ { name = "Reya Oberoi", email = "reyaoberoi2005@gmail.com" } ]
+keywords = ["nlp", "keywords", "tfidf", "embeddings", "text"]
+classifiers = [
+"Programming Language :: Python :: 3",
+"License :: OSI Approved :: MIT License",
+"Operating System :: OS Independent",
+]
+
+
+
+
+dependencies = [
+"numpy>=1.21",
+"scikit-learn>=1.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/reyaoberoi/auto-keyword-ranker"
+"Repository" = "https://github.com/reyaoberoi/auto-keyword-ranker"
+"Bug Tracker" = "https://github.com/reyaoberoi/auto-keyword-ranker/issues"
+
+[project.scripts]
+autokeyword = "autokeyword.cli:main"
+
+
+[project.optional-dependencies]
+embed = ["sentence-transformers>=2.2"]
+dev = ["pytest", "build", "twine"]

@@ -1,0 +1,2 @@
+[console_scripts]
+autokeyword = autokeyword.cli:main

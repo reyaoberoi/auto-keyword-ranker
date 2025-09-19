@@ -1,0 +1,10 @@
+numpy>=1.21
+scikit-learn>=1.0
+
+[dev]
+pytest
+build
+twine
+
+[embed]
+sentence-transformers>=2.2
